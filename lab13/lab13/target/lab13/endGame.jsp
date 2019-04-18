@@ -11,6 +11,17 @@
     <title>Number Quiz</title>
 </head>
 <body>
+<%!
+int score;
+int totalQuiz;
+%>
+
+<%
+
+    score = session.getAttribute("score")==null?0:Integer.parseInt(session.getAttribute("score").toString());
+    totalQuiz = request.getAttribute("totalQuiz")==null?0:Integer.parseInt(request.getAttribute("totalQuiz").toString());
+
+%>
 <div id="endedgame" >
     <div style="width:500px; margin-left: auto;margin-right: auto; border:1px solid blue">
         <header>
@@ -18,9 +29,9 @@
             <h1>The Number Quiz</h1>
         </header>
         <section>
-            <p>Your Current Score is <span>score</span></p>
+            <p>Your Current Score is <span><%=score%></span></p>
             <div>
-                <p>You have Completed the Number Quiz ${score}, with a score  out of ${totalQuiz}</p>
+                <p>You have Completed the Number Quiz , with a score <%= score %> out of <%=totalQuiz %></p>
             </div>
 
 

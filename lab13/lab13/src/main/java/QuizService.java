@@ -15,7 +15,7 @@ public class QuizService {
 
            quiz = new Quiz();
            endGame = false;
-           index =0;
+           index =-1;
 
 
        }
@@ -36,22 +36,25 @@ public class QuizService {
 
     public String ChooseQuestion() {
 
-        if (index == quiz.getQuestions().length - 1){
-            endGame = true;
 
-        }
-
-
-        else
             index += 1;
+
+            if (index+1 == quiz.getQuestions().length ){
+                endGame = true;
+
+
+            }
 
         return quiz.getQuestions()[index];
 
     }
 
-    public String ChooseQuestion(int ind){
+    public String ChoosefirstQuestion(){
+           if(index==-1)
+           index++;
 
-           return quiz.getQuestions()[ind];
+           return quiz.getQuestions()[0];
+
     }
 
 

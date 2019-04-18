@@ -14,6 +14,15 @@
 
 <body>
 
+<%! int score;String question; %>
+<%
+   score = session.getAttribute("score")==null?0:Integer.parseInt(session.getAttribute("score").toString());
+   question = request.getAttribute("question")==null?"none":request.getAttribute("question").toString();
+
+%>
+
+<%=score%>
+<%=request.getAttribute("question")%>
 
 <div style="width: 500px; margin-left: auto;margin-right: auto; border:1px solid blue" id="ongoinggame">
     <header>
@@ -21,10 +30,10 @@
         <h1>The Number Quiz</h1>
     </header>
     <section>
-        <p>Your Current Score is <span>${score}</span></p>
+        <p>Your Current Score is <span><%=score%></span></p>
         <p>Guess the next number in the sequence.</p>
         <div>
-            <p>3,1,4,1,5</p>
+            <p><%=question%></p>
         </div>
 
         <form action="quiz" method="post" style="margin-bottom: 30px;">
