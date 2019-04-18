@@ -14,21 +14,36 @@ public class QuizServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
+
         QuizService quizService = QuizService.getQuizServiceInstance();
 
         HttpSession session = req.getSession();
-        if(session.getAttribute("score")==null){
-            session.setAttribute("score", "0");
+
+          System.out.println("in get");
+
+        if (quizService.getEndGame() == true) {
+
+            req.setAttribute("totalQuiz", quizService.getIndex());
+            req.getRequestDispatcher("endGame.jsp").forward(req, resp);
+
+
+        } else {
+
+            if(session.getAttribute("score")==null){
+                session.setAttribute("score", "0");
+            }
+
+
+            if(session.getAttribute("question")==null){
+                String question = quizService.ChooseQuestion();
+                System.out.println("calling question");
+                session.setAttribute("question",question);
+            }
+
+            req.getRequestDispatcher("startGame.jsp").forward(req, resp);
+
         }
-        int score = Integer.parseInt(session.getAttribute("score").toString());
-        String question = quizService.ChoosefirstQuestion();
-
-        req.setAttribute("question", question);
-
-        System.out.println(question);
-
-        req.getRequestDispatcher("index.jsp").forward(req, resp);
-
 
 
     }
@@ -58,26 +73,27 @@ public class QuizServlet extends HttpServlet {
                 session.setAttribute("score", "" + score + "");
             }
 
-
-            if (quizService.getEndGame() == true) {
-
-                req.setAttribute("totalQuiz", quizService.getIndex());
-                req.getRequestDispatcher("endGame.jsp").forward(req, resp);
-
-            } else {
+            String question = quizService.ChooseQuestion();
+            session.setAttribute("question", question);
 
 
-                String question = quizService.ChooseQuestion();
-                req.setAttribute("question", question);
 
-                System.out.println(req.getAttribute("question") + " " + session.getAttribute("score"));
-                req.getRequestDispatcher("index.jsp").forward(req, resp);
+        if (quizService.getEndGame() == true) {
 
-            }
+            req.setAttribute("totalQuiz", quizService.getIndex());
+            req.getRequestDispatcher("endGame.jsp").forward(req, resp);
+            req.removeAttribute("question");
 
-        }else{
-            System.out.println("nothing");
+        } else {
+
+
+
+            req.getRequestDispatcher("startGame.jsp").forward(req, resp);
+
         }
 
+        }else{
+            req.getRequestDispatcher("startGame.jsp").forward(req, resp);
+        }
     }
 }

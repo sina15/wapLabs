@@ -49,13 +49,7 @@ public class QuizService {
 
     }
 
-    public String ChoosefirstQuestion(){
-           if(index==-1)
-           index++;
 
-           return quiz.getQuestions()[0];
-
-    }
 
 
 

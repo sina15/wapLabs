@@ -17,7 +17,7 @@
 <%! int score;String question; %>
 <%
    score = session.getAttribute("score")==null?0:Integer.parseInt(session.getAttribute("score").toString());
-   question = request.getAttribute("question")==null?"none":request.getAttribute("question").toString();
+   question = session.getAttribute("question")==null?"none":session.getAttribute("question").toString();
 
 %>
 
@@ -36,7 +36,7 @@
             <p><%=question%></p>
         </div>
 
-        <form action="quiz" method="post" style="margin-bottom: 30px;">
+        <form action="myQuiz" method="post" style="margin-bottom: 30px;">
             <label>Your Answer: &nbsp;<input type="number" name="result"></label><br/><b/>
             <input type="submit" value="Submit">
         </form>

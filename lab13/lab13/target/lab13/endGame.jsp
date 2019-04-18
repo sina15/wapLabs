@@ -19,7 +19,7 @@ int totalQuiz;
 <%
 
     score = session.getAttribute("score")==null?0:Integer.parseInt(session.getAttribute("score").toString());
-    totalQuiz = request.getAttribute("totalQuiz")==null?0:Integer.parseInt(request.getAttribute("totalQuiz").toString());
+    totalQuiz = request.getAttribute("totalQuiz")==null?0:Integer.parseInt(request.getAttribute("totalQuiz").toString())+1;
 
 %>
 <div id="endedgame" >
