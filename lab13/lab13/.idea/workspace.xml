@@ -7,19 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bba88ea-9e29-49ac-bc28-ee8473797020" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab14/lab14.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../lab14/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QuizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuizService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QuizServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QuizServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/endGame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/endGame.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/startGame.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/QuizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/QuizService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/QuizServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/QuizServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab13.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab13.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab13/WEB-INF/classes/QuizService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab13/WEB-INF/classes/QuizService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab13/WEB-INF/classes/QuizServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab13/WEB-INF/classes/QuizServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab13/endGame.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/lab13/endGame.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/lab13/index.jsp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -321,7 +310,7 @@
       <workItem from="1555561069933" duration="1265000" />
       <workItem from="1555599634565" duration="3465000" />
       <workItem from="1555613704749" duration="616000" />
-      <workItem from="1555617756216" duration="5305000" />
+      <workItem from="1555617756216" duration="5379000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1555542353779</created>
@@ -344,15 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1555619866524</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="okay">
+      <created>1555623343397</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1555623343397</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13569000" />
+    <option name="totallyTimeSpent" value="13643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="732" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2657512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -364,7 +359,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3296875" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3296875" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
